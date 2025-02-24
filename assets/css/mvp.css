@@ -59,7 +59,7 @@ article aside {
 }
 
 body {
-  background: var(--color-bg) url('/images/background.jpg') no-repeat center/cover;
+  background: var(--color-bg) url('/assets/images/background.jpg') no-repeat center/cover;
   background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-family);
@@ -81,8 +81,8 @@ main {
 hr {
   background-color: var(--color-bg-secondary);
   border: none;
-  height: 1px;
-  margin: 4rem 0;
+  height: 2px;
+  margin: 2rem 0;
   width: 100%;
 }
 
@@ -298,10 +298,10 @@ sup {
 
 /* Links */
 a {
-  color: var(--color-link);
+  color: white;
   display: inline-block;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
@@ -603,21 +603,20 @@ blockquote footer {
   top: 0;               /* Căn phía trên */
   left: 0;
   width: 100%;
-  background-color: #333; /* Màu nền tuỳ chỉnh */
+  background-color: transparent; /* Màu nền tuỳ chỉnh */
   color: #fff;            /* Màu chữ tuỳ chỉnh */
   padding: 16px;
   
-  /* Ẩn thanh topbar ban đầu bằng cách đẩy nó lên trên */
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
+  /*Hiệu ứng chuyển màu*/
+  transition: background-color 0.3s ease-in-out;
 
   /* Đảm bảo topbar nằm trên các phần tử khác */
   z-index: 9999;
 }
 
-/* Khi thêm class .visible, thanh topbar sẽ trượt xuống */
+/* Khi thêm class .visible, đổi màu */
 #topbar.visible {
-  transform: translateY(0);
+  background-color: #333;
 }
 
 /* Class thêm vào */
@@ -631,14 +630,27 @@ blockquote footer {
   font-size: medium;
   background-color: transparent;
   width: 100px;
-  border: 0;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: medium;
+  margin-top: -5px;
+  text-align: center;
+}
+.btn-topbar.title {
+  border: solid 2px white;
+  border-radius: var(--border-radius);
+  padding-left: 1px;
+}
+.btn-topbar.title:hover{
+  border-color: #007bff;
 }
 .btn-topbar:hover{
+  transition: 0.3s;
   cursor: pointer;
-  background-color: #007bff;
+  color: #007bff;
 }
 .btn-topbar:active{
-  background-color: #007bff;
+  color: #007bff;
   opacity: 0.8;
 }
 
@@ -657,4 +669,100 @@ blockquote footer {
 /* Loại bỏ margin cho button đầu tiên nếu dùng margin */
 .topbar-container button:first-child {
   margin-left: 0;
+}
+
+.content {
+  width: 90%;           /* Độ rộng cố định cho phần nội dung */
+  margin: 50px auto;      /* Căn giữa theo chiều ngang, cách trên dưới 20px */
+  background-color: rgb(255, 255, 255); /* Nền trắng (có thể chỉnh thành màu hoặc độ trong suốt) */
+  border: 2px solid #000; /* Đường viền cho phần nội dung */
+  border-radius: 10px;
+  padding: 20px;          /* Khoảng cách bên trong container */
+  box-sizing: border-box;  /* Đảm bảo padding không làm tăng thêm độ rộng tổng */
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+.content.first{
+  background: transparent;
+  color: white;
+  border: white solid 1px;
+  animation: none;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title{
+  border: white 2px;
+  border-radius: 5px;
+  float:right;
+  padding-left: 20px;
+}
+/*Typing Word Effect*/
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid grey; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  text-align: center;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey; }
+}
+
+.avatar{
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid black;
+  padding: 5px;
+  margin: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+  margin-left: 0.5rem;
+  margin-top: 30px;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.avt-container{
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column; /* Xếp chữ theo cột */
+}
+
+.name:hover{
+  color: #0097fc;
+  cursor: default;
+}
+
+.name.job{
+  color: #451eb7;
 }

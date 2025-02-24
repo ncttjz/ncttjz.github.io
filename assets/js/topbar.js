@@ -1,10 +1,10 @@
 // top bar movement
 window.addEventListener('scroll', function() {
     const topbar = document.getElementById('topbar');
-    if (window.scrollY > 125) {
+    if (window.scrollY > 50) {
       topbar.classList.add('visible');
     } else {
-      topbar.classList.remove('visible');
+      topbar.classList.remove('visible');;
     }
   });
   
