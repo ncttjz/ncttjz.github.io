@@ -59,7 +59,7 @@ article aside {
 }
 
 body {
-  background: var(--color-bg) url("./assets/images/background.jpg") no-repeat center/cover;
+  background: var(--color-bg) url("../images/background.jpg") no-repeat center/cover;
   background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-family);
@@ -728,7 +728,7 @@ blockquote footer {
   from, to { border-color: transparent }
   50% { border-color: grey; }
 }
-
+/* About Me CSS */
 .avatar{
   width: 300px;
   height: auto;
@@ -736,6 +736,12 @@ blockquote footer {
   border: 3px solid black;
   padding: 5px;
   margin: 10px;
+  transition: 0.5s;
+}
+
+.avatar:hover{
+  padding: 10px;
+  transition: 0.5s padding;
 }
 
 .icon {
@@ -745,6 +751,29 @@ blockquote footer {
   margin-top: 30px;
 }
 
+.flextext{
+  display: flex;
+  width: max-content;
+}
+
+.bigicon {
+  width: 30%;
+  height: auto;
+  margin-left: 0.5rem;
+  margin-top: 30px;
+}
+.mediumicon{
+  width: 15%;
+  height: auto;
+  margin-left: 0.5rem;
+  margin-top: 30px;
+}
+.xxlicon {
+  width: auto;
+  height: 80px;
+  margin-left: 0.5rem;
+  margin-top: 30px;
+}
 .icon:hover {
   opacity: 0.8;
 }
@@ -758,11 +787,83 @@ blockquote footer {
   flex-direction: column; /* Xếp chữ theo cột */
 }
 
+
 .name:hover{
   color: #0097fc;
   cursor: default;
+  transition: color 0.3s;
 }
 
 .name.job{
   color: #451eb7;
+}
+
+.name.job:hover{
+  color: #920de9;
+  transition: color 0.5s;
+}
+
+.parttitle{
+  border-top: solid 3px grey;
+  border-bottom: solid 3px grey;
+  font: bolder;
+  width: max-content;
+  margin: 0 auto;
+  cursor: default;
+}
+
+.right{
+  float: right;
+}
+/* Ability CSS */
+.skillcontainer{
+  background-color: rgba(128, 128, 128, 0.425);
+  border-radius: 5px;
+  width: 80%;
+}
+.skill{
+  background-color: #0097fc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: right;
+  color:white;
+}
+
+.htmlcss{
+  width: 75%;
+}
+.database{
+  width: 70%;
+}
+.desk{
+  width: 70%;
+}
+.dsa{
+  width: 80%;
+}
+.div-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ability-container {
+  display: flex; /* Đặt các phần tử trong cùng một hàng */
+  justify-content: space-between; /* Căn đều hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  flex-wrap: wrap;
+}
+.ability-box {
+  display: flex;
+  flex-direction: column; /* Đặt nội dung xếp dọc */
+  align-items: center; /* Căn giữa nội dung */
+  text-align: center;
+  width: 45%; /* Đảm bảo mỗi box chiếm một nửa hàng */
+  height: auto;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 40px; /* Khoảng cách giữa các ô */
+  margin-bottom: 50px; /* Khoảng cách giữa hai hàng */
 }
