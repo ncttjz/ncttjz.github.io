@@ -59,7 +59,7 @@ article aside {
 }
 
 body {
-  background: var(--color-bg) url("./assets/images/background.jpg") no-repeat center/cover;
+  background: var(--color-bg) url("./images/background.jpg") no-repeat center/cover;
   background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-family);
