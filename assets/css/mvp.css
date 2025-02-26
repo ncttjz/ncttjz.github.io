@@ -653,6 +653,11 @@ blockquote footer {
   color: #007bff;
   opacity: 0.8;
 }
+.btn-topbar.seeing{
+  transition: 0.3s;
+  cursor: pointer;
+  color: #007bff;
+}
 
 .topbar-container {
   display: flex;
@@ -754,23 +759,12 @@ blockquote footer {
 .flextext{
   display: flex;
   width: max-content;
+  padding-bottom: 5px;
 }
 
-.bigicon {
-  width: 30%;
-  height: auto;
-  margin-left: 0.5rem;
-  margin-top: 30px;
-}
-.mediumicon{
-  width: 15%;
-  height: auto;
-  margin-left: 0.5rem;
-  margin-top: 30px;
-}
-.xxlicon {
+.sameicon {
   width: auto;
-  height: 80px;
+  height: 100px;
   margin-left: 0.5rem;
   margin-top: 30px;
 }
@@ -827,20 +821,10 @@ blockquote footer {
   display: flex;
   justify-content: right;
   color:white;
+  width: 0%;
+  transition: 2s width ease-in-out;
 }
 
-.htmlcss{
-  width: 75%;
-}
-.database{
-  width: 70%;
-}
-.desk{
-  width: 70%;
-}
-.dsa{
-  width: 80%;
-}
 .div-center{
   display: flex;
   align-items: center;
