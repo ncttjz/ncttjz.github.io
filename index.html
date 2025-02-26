@@ -24,6 +24,7 @@
     <meta property='article:publisher' content='https://www.facebook.com/zKingOfDuck' />
 
         <!-- CSS and JavaScript -->
+        <link rel="stylesheet" href="./assets/css/cardhover.css">
         <link rel="stylesheet" href="./assets/css/mvp.css">
         <link rel="icon" href="./icon.jpg" />
         <script src="./assets/js/topbar.js"></script>
@@ -38,10 +39,10 @@
         <div><form id="topbar" class="form-topbar">
             <div class="topbar-container">
                 <a class="btn-topbar title" href="https://github.com/ncttjz/">GITHUB</a>
-                <a href="#about" class="btn-topbar" data-section="aboutsect">ABOUT</a>
-                <a href="#ability" class="btn-topbar" data-section="abilitysect">ABILITY</a>
-                <a href="#portfolio" class="btn-topbar" data-section="portfoliosect">PORTFOLIO</a>
-                <a href="#contact" class="btn-topbar" data-section="contactsect">CONTACT</a>
+                <a href="#about" class="btn-topbar smooth-scroll" data-section="aboutsect">ABOUT</a>
+                <a href="#ability" class="btn-topbar smooth-scroll" data-section="abilitysect">ABILITY</a>
+                <a href="#portfolio" class="btn-topbar smooth-scroll" data-section="portfoliosect">PORTFOLIO</a>
+                <a href="#contact" class="btn-topbar smooth-scroll" data-section="contactsect">CONTACT</a>
             </div>
         </form></div>
         <div class="content first">
@@ -52,7 +53,7 @@
         <div id="aboutsect" class="content show">
             <div id="about">
                 <div class="avt-container">
-                    <img class="avatar" src="./assets/images/avatar.jpg" alt="avatar">
+                    <img class="avatar" src="./assets/images/avatar.jpg" alt="a handsome boy">
                     <div class="div-center"><h1 class="name">Nguyễn Công Thuận Thiên<img class="icon" src="./assets/images/check.png"></h1></div>
                     <div class="div-center"><h2 class="name job">Full-stack Developer</h2></div>
                     <hr>
@@ -71,38 +72,95 @@
             <div class="ability-container">
                 <div class="row">
                     <div class="ability-box">
-                        <img class="sameicon" src="./assets/images/htmlcssjs.png"><b class="flextext">Website Development</b>
+                        <img class="sameicon" src="./assets/images/htmlcssjs.png" alt="HTML5, CSS3, JavaScript Icon"><b class="flextext">Website Development</b>
                         <div class="skillcontainer">
                             <div class="skill" data-percent="75">
                                 <span>75%</span>
                             </div>
                         </div>
+                        <p>Căn bản HTML5 CSS3 JavaScript</p>
                     </div>
                     <div class="ability-box">
-                        <img class="sameicon" src="./assets/images/pycjv.png"><b class="flextext">Desktop Development</b>
+                        <img class="sameicon" src="./assets/images/pycjv.png" alt="C++, Java, Python Icon"><b class="flextext">Desktop Development</b>
                         <div class="skillcontainer">
                             <div class="skill" data-percent="70">
                                 <span>70%</span>
                             </div>
                         </div>
+                        <p>Căn bản C++, Java, Python</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="ability-box">
-                        <img class="sameicon" src="./assets/images/dbicon.png"><b class="flextext">Database(MySQL, SQLServer)</b>
+                        <img class="sameicon" src="./assets/images/dbicon.png" alt="Database Icon"><b class="flextext">Database(MySQL, SQLServer)</b>
                         <div class="skillcontainer">
                             <div class="skill" data-percent="70">
                                 <span>70%</span>
                             </div>
                         </div>
+                        <p>MySQL, SQL Server</p>
                     </div>
                     <div class="ability-box">
-                        <img class="sameicon" src="./assets/images/dsa.png"><b class="flextext">Data Structures and Algorithms</b>
+                        <img class="sameicon" src="./assets/images/dsa.png" alt="DSA Icon"><b class="flextext">Data Structures and Algorithms</b>
                         <div class="skillcontainer">
                             <div class="skill" data-percent="80">
                                 <span>80%</span>
                             </div>
                         </div>
+                        <p class="biggerp">Giải và tối ưu thuật toán...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfoliosect" class="content show">
+            <div id="portfolio" class="div-center">
+                <h2 class="parttitle">PORTFOLIO</h2>
+            </div>
+            <div class="row">
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 300px; overflow: hidden; border-radius: 1px;">
+                    <img src="./assets/images/colorbgcard.png" alt="Application Picture"    
+                         class="d-block w-full">
+                
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Desktop Application
+                        </p>
+                
+                        <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                            Color Background 1.0
+                        </h1>
+                
+                        <p class="mb-1">
+                            This application help you easy change background color and desktop wallpapers &hellip;
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/ncttjz/colorbg-src" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            MORE
+                        </a>
+                    </div>
+                </div>
+                <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 300px; overflow: hidden; border-radius: 1px;">
+                    <img src="./assets/images/billardmmcard.png" alt="Application Picture"    
+                         class="d-block w-full">
+                
+                    <div class="px-2 py-2">
+                        <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                            Desktop Application
+                        </p>
+                
+                        <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                            Billard Shop Management
+                        </h1>
+                
+                        <p class="mb-1">
+                            This application help manage your billards shop &hellip;
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/ncttjz/Billard-Shop-Management" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            More
+                        </a>
                     </div>
                 </div>
             </div>

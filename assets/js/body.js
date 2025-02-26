@@ -45,6 +45,43 @@ document.addEventListener("DOMContentLoaded", function () {
   sections.forEach(section => observer.observe(section));
 });
 
+function smoothScrollTo(targetY, duration = 600) {
+    const startY = window.scrollY;
+    const diff = targetY - startY;
+    let startTime;
+  
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percent = Math.min(progress / duration, 1);
+      
+      window.scrollTo(0, startY + diff * percent);
+      if (progress < duration) {
+        window.requestAnimationFrame(step);
+      }
+    }
+  
+    window.requestAnimationFrame(step);
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".smooth-scroll");
+  
+    links.forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          const targetY = targetSection.getBoundingClientRect().top + window.scrollY;
+          smoothScrollTo(targetY-70, 300); // 600ms cho hiệu ứng cuộn
+        }
+      });
+    });
+  });
+  
+
   //Loader
   window.addEventListener("load", function () {
     let preloader = document.getElementById("preloader");
