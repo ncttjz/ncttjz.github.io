@@ -45,4 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
   sections.forEach(section => observer.observe(section));
 });
 
-  
+  //Loader
+  window.addEventListener("load", function () {
+    let preloader = document.getElementById("preloader");
+    preloader.style.display = "none"; // Ẩn preloader khi trang tải xong
+});
