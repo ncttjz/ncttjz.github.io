@@ -800,7 +800,7 @@ blockquote footer {
 
 .parttitle{
   border-top: solid 3px grey;
-  border-bottom: solid 3px grey;
+  border-bottom: solid 3px #0097fc;
   font: bolder;
   width: max-content;
   margin: 0 auto;
@@ -879,4 +879,17 @@ blockquote footer {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.contact-container{
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: white;
+}
+
+.detail{
+  border-top: transparent;
+  border-radius: 5px;
 }
