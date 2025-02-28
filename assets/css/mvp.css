@@ -607,7 +607,6 @@ blockquote footer {
   background-color: transparent; /* Màu nền tuỳ chỉnh */
   color: #fff;            /* Màu chữ tuỳ chỉnh */
   padding: 16px;
-  
   /*Hiệu ứng chuyển màu*/
   transition: background-color 0.3s ease-in-out;
 
@@ -636,14 +635,17 @@ blockquote footer {
   font-size: medium;
   margin-top: -5px;
   text-align: center;
+  width: max-content;
+  padding-left: 20px;
 }
-.btn-topbar.title {
-  border: solid 2px white;
-  border-radius: var(--border-radius);
-  padding-left: 1px;
+
+.link:hover{
+  color: #007bff;
 }
-.btn-topbar.title:hover{
-  border-color: #007bff;
+
+.link:active{
+  color: #007bff;
+  opacity: 0.8;
 }
 .btn-topbar:hover{
   transition: 0.3s;
